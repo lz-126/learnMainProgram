@@ -15,3 +15,5 @@ bindgetuserinfo="handleGetUserInfo"
 <open-data type="userAvatarUrl"></open-data>
 <open-data type="userNickName"></open-data>
 </view>
+    <!-- 获取数据渲染 -->
+    <!-- <view wx:for="{{list}}">{{item.title}}</view> -->
