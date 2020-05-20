@@ -1,6 +1,14 @@
 // pages/home/home.js
+// getApp()获取App()产生的实例对象
+const app = getApp()
+console.log(app.globalData.name);
+console.log(app.globalData.age);
 Page({
-
+  handleGetUserInfo(event){
+    //点击获取用户信息
+    console.log(event);
+    
+  },
   /**
    * 页面的初始数据
    */
