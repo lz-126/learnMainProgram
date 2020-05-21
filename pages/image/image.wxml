@@ -1,0 +1,33 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image的基本使用 -->
+<!--
+  1.image可以写成单标签,也可以写成双标签
+  2.image默认有自己的大小320x240
+  3.行内块级元素
+  -->
+  <!-- <image/> -->
+
+  <!-- 2.src:本地路径(相对/绝对)/远程地址 -->
+  <image src="/assets/test/forceful.png"/>
+  <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+  <!-- 3.显示相册中的图片 -->
+  <button bindtap="handleChooseAlbum">选中图片</button>
+  <image src="{{imagePath}}"/>
+<!-- -------------------- -->
+  <!-- 4.bindload:监听图片加载完成 -->
+  <!-- lazy-load :图片的懒加载 -->
+  <image wx:for='{{1}}'
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+  bindload="handleImageLoad"
+  lazy-load
+  />
+
+  <!-- 5 show-menu-by-longpress 长按图片出现识别小程序码-->
+  <image show-menu-by-longpress  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+  <!-- 
+    6.mode 设置应该以咋样的方式裁剪图片
+      常用设置:widthFix
+  -->
+       <image mode="widthFix" src="/assets/test/2wm.png"/>

@@ -1,0 +1,15 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view的基本使用 -->
+<view class="bgred">块级容器</view>
+
+<!-- 2.hover-class:当用户按下时,显示的样式 -->
+<!--  hover-stay-time:按下态保留时间 默认400ms -->
+<view class="box" 
+  hover-class="bgpink" 
+  hover-stay-time="{{1000}}">box1</view>
+
+
+<!-- 3.hover-stop-propagation 阻止祖先元素的点击态 -->
+<view class="box1" hover-class="box1-hover">
+	<view class="box2" hover-class="box2-hover" hover-stop-propagation>box2</view>
+</view>

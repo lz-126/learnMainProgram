@@ -1,0 +1,31 @@
+/* pages/view/view.wxss */
+.bgred{
+ background-color:red ;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  background-color:#ccc ;
+}
+.bgpink{
+  font-size: 30px;
+  background-color:pink ;
+}
+.box1{
+  width: 200px;
+  height: 200px;
+  background-color:#ccc;
+  margin-top: 20px;
+}
+.box1-hover{
+  background-color:skyblue ;
+}
+.box2{
+  width: 100px;
+  height: 100px;
+  background-color:#fff;
+  margin: 10px;
+}
+.box2-hover{
+  background-color: slateblue;
+}

@@ -1,0 +1,19 @@
+<!--pages/input/input.wxml-->
+
+<!-- 1.input基本使用 -->
+<input/>
+<!-- 2.value: input中的默认值 -->
+<input value="哈哈"/>
+<!-- 3.type:决定键盘类型 (文本输入键盘/数字/身份证) -->
+<input  type="number"/> 
+<!-- 4. password :暗文 -->
+<input password/>
+<!-- 5.placeholder  placeholder-class/style -->
+<inout placeholder="请输入手机号"/>
+<!-- 6.input 绑定事件 
+    用户输入内容
+    获取焦点
+    失去焦点-->
+<input bindinput="bindInput"
+        bindfocus="bindFocus"
+        bindblur="bindBlur"/>
