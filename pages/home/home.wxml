@@ -1,4 +1,7 @@
 <!--pages/home/home.wxml-->
+
+<!--   include:可以将目标文件中除了<template/> <wxs/>外的整个代码引入,相当于是拷贝到include位置 -->
+<include src="/wxml/header.wxml"/>
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
-
+<include src="/wxml/footer.wxml"/>

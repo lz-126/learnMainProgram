@@ -1,0 +1,40 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs 类似于javaScript 结合wxml 可以构建出页面结构 -->
+<!-- 
+  在wxml中不能直接使用Page/Component中定义函数
+  1-
+    但是在某些情况下,我们希望使用函数处理wxml中的数据(类似于Vue中的过滤器)
+    此时就需要使用wxs
+  2-
+    wxs的运行环境和js代码是隔离的 wxs中不能调用其他JS文件中定义的函数,也能调用小程序提供的API
+    wxs不能作为组件的事件回调
+    由于运行环境的差异在ios设备上小程序内的wxs会比js代码快2-20倍,安卓上无差别 
+ -->
+  <!-- 1.1 基本使用 -->
+<!-- <wxs module="info">
+  //JS代码
+  var message = "Hello World";
+  var name = "coderWhy";
+  var sum = function(num1,num2){
+    return num1+num2
+  }
+  module.exports={
+    message:message,
+    name:name,
+    sum:sum
+  }
+</wxs> -->
+  <!-- 1.2 开发使用  定义在单独的wxs文件中 再使用wxs标签引入(相对路径)使用  -->
+
+<wxs src = "../../wxs/info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(20,30)}}</view>
+
+<!-- 2.wxs 应用 -->
+  <!-- 2.1 保留小数 -->
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price)}}</view>
+  <!-- 2.2 处理服务器返回的事件戳 -->
+<view>{{format.dateFormat(time,'yyyy-MM-dd hh:mm:ss')}}</view>
+

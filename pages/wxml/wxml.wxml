@@ -1,0 +1,26 @@
+<!--pages/wxml/wxml.wxml-->
+<view> -----------wxml模板---------</view>
+
+<!-- 1.1wxml模板 在没有被使用是不会渲染的 -->
+  <!-- <template name="contentItem">
+  <button size="mini" >{{btnText}}</button>
+  <view>{{content}}</view>
+  </template> -->
+
+<!-- 
+  1.3导入使用模板
+    wxml模板导入是不能使用递归式导入的 
+    也不能使用include()
+   -->
+  <import src = "/wxml/template.wxml"/>
+
+<!-- 1.2使用模板 -->
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈哈'}}"/>
+<!-- 
+  关于wxml的导入的方式
+    1.import: 主要是导入template 不能进行递归导入
+    2.include:引入
+      include:可以将目标文件中除了<template/> <wxs/>外的整个代码引入
+        ,相当于是拷贝到include位置
+ -->
+ 
