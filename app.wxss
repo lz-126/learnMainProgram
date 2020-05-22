@@ -1,0 +1,6 @@
+@import "./style/btn.wxss";
+@import "./style/fn.wxss";
+.container{
+  color: pink;
+  font-size: 30px;
+}

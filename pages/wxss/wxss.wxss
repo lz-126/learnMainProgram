@@ -1,0 +1,11 @@
+/* pages/wxss/wxss.wxss */
+@import "./style/box.wxss";
+@import "./style/content.wxss";
+@import "./style/weui-searchbar.wxss";
+
+.demo-rpx{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: greenyellow;
+  font-size: 60rpx;
+}
