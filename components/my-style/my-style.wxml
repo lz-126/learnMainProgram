@@ -1,0 +1,15 @@
+<!--components/my-style/my-style.wxml-->
+<view class="title">我是style的样式</view>
+<view class="content">我是style的内容</view>
+<!-- 1.组件内部样式,对外部组件的影响 -->
+  <!-- 在自定义组件中的class样式,只对组件wxml中的节点生效,对引用组件的page页面不会有影响 -->
+  <!-- 组件内部不允许使用id选择器,属性选择器,标签选择器 -->
+<!-- 2.外部样式,对组件内样式的影响 -->
+  <!-- 外部使用标签选择器,会对组件内部产生影响.class/id只会对外部wxml的节点生效 -->
+<!-- 3.如果希望class可以相互影响 -->
+  <!-- 
+    在自定义组件Component对象中传入options对象
+      styleIsolation:"isolated" //启用样式隔离
+                     "apply-shared" //wxss 影响到组件
+                     "shared" //相互影响
+   -->

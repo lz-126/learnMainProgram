@@ -2,3 +2,46 @@
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
 
+<!--1. 使用自定义组件 -->
+  <!-- <my-cpn/> -->
+<!--2.自定义组件的样式细节 -->
+  <!-- <my-style/> -->
+<!-- 3.给自定义组件传递数据 -->
+ <my-props title="哈哈哈"/>
+  <my-props titleclass="red"/>
+<!-- 4.给自定义组件设置样式 -->
+<my-props titleclass="green"/>
+
+<!--5.组件内部发生事件  -->
+<view>当前计数{{conter}}</view>
+<my-event bind:increment="handleAddConter"/>
+
+<!-- 6.自定义组件z-tab-control练习 -->
+<z-tab-control titles="{{['流行','新款','精选']}}"
+              bind:itemClick="handleTabClick"/>
+
+<!-- 7.直接选中组件修改数据-->
+<my-sel id="sel-id"/>
+<button size="mini"
+        bindtap="handleIncrementCpn">修改组件内部的数据</button>
+<view>------------插槽的使用---------</view>
+<!-- 8.1单个插槽插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+<my-slot> 
+  <slider value="60"></slider>
+</my-slot>
+<!-- 8.2 多个插槽.. -->
+<!-- 
+  1.给每一个插槽起名:name属性
+  2.必须在Component对象中添加options{multipleSlots:true}
+ -->
+ <button bindtap="hangleCheckShow" size="mini">切换显示</button>
+ <block wx:if="{{isShow}}">
+  <my-mslot>
+    <button size="mini" slot="slot2">我是插入的按钮</button>
+    <slider slot="slot1" value="30"/>
+    <text slot="slot3">插槽3</text>
+  </my-mslot>
+ </block>
