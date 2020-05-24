@@ -2,3 +2,15 @@
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
 
+<view>
+<!-- 1.Toast -->
+<button bindtap="handleShowToast" size="mini">showToast</button>
+<!-- 2.Modal -->
+<button bindtap="handleShowModal" size="mini">showModal</button>
+<!-- 3.loading -->
+<button bindtap="handleShowLoading" size="mini">showLoading</button>
+<!-- 4.ActionSheet -->
+<button bindtap="handleSwActiohon" size="mini">showActionSheet</button>
+<!-- 5.分享按钮 -->
+<button  size="mini" open-type="share">分享</button>
+</view>
