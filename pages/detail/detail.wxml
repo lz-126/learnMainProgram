@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- 返回 navigator -->
+<navigator open-type="navigateBack">返回</navigator>
+<navigator url="/pages/comment/comment">跳转到评论页</navigator>
+<!-- 返回 通过事件 -->
+<button bindtap="hangleBackHome">代码返回</button>
