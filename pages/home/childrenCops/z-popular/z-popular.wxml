@@ -1,0 +1,5 @@
+<!--pages/home/childrenCops/z-popular/z-popular.wxml-->
+
+<view class="popular">
+  <image src="/assets/images/home/popular_bg.jpg" class="po-image" mode="widthFix"/>
+</view>

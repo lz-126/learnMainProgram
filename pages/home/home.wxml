@@ -1,4 +1,15 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">按钮</button>
-
+<!-- 1.展示轮播图 -->
+<z-swiper list="{{banners}}" /> 
+<!-- 2.推荐数据的展示 -->
+<z-recommend recommends="{{recommends}}" bind:imageLoad="handleImageLoad"/>
+<!-- 3.展示本周流行 -->
+<z-popular/>
+<!-- 4.tal-control -->
+<z-tab-control id="tab-control" class="{{isTabFixed?'fixed':''}}" titles="{{titles}}" bind:tabclick="handleTabClick"/>
+<z-tab-control wx:if="{{ isTabFixed}}" titles="{{titles}}"/>
+<!-- 5.展示商品数据 -->
+<z-goods goods="{{goods[currentType].list}}" />
+<!-- 6.回到顶部 -->
+<!-- hiddle 对于自定义组件是没有效果的 -->
+<z-back-top wx:if="{{showBackTop}}"/>
